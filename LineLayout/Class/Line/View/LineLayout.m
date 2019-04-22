@@ -22,8 +22,8 @@
     
     for (UICollectionViewLayoutAttributes* attributes in attributesAry) {
         
-        CGFloat   collectionViewCenterX =  self.collectionView.center.x + self.collectionView.contentOffset.x;
-        CGFloat attributeCenterX = attributes.center.x;
+        CGFloat   collectionViewCenterX =   self.collectionView.center.x + self.collectionView.contentOffset.x;
+        CGFloat   attributeCenterX      =   attributes.center.x;
         
         CGFloat delta = ABS(collectionViewCenterX-attributeCenterX);
         CGFloat scale = 1- delta/self.collectionView.frame.size.width;
@@ -38,19 +38,25 @@
     return YES;
 }
 -(CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity{
+
+    CGRect rect =CGRectMake(self.collectionView.contentOffset.x+ proposedContentOffset.x,0,self.collectionView.frame.size.width, self.collectionView.frame.size.height);
     
-    CGRect rect =CGRectMake(self.collectionView.contentOffset.x,0,self.collectionView.frame.size.width, self.collectionView.frame.size.height);
-    
-    NSLog(@"contentOffset=%@",NSStringFromCGPoint(proposedContentOffset));
     NSArray * superAry =[super layoutAttributesForElementsInRect:rect];
     
     for (UICollectionViewLayoutAttributes * attributes in superAry) {
-    
         
+        CGFloat minDeta = MAXFLOAT;
+        CGFloat attribiuteCenterX = attributes.center.x;
+        CGFloat contentViewCenterX = self.collectionView.center.x + proposedContentOffset.x;
         
-        
+        CGFloat delta = attribiuteCenterX - contentViewCenterX;
+        if (ABS(delta)< minDeta) {
+            minDeta = delta;
+        }
+        return CGPointMake(proposedContentOffset.x + delta, 0);
     }
-    return CGPointZero;
+    
+    return  CGPointZero;
 }
 
 @end
