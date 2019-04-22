@@ -22,7 +22,7 @@
     
     for (UICollectionViewLayoutAttributes* attributes in attributesAry) {
         
-        CGFloat   collectionViewCenterX =   self.collectionView.center.x + self.collectionView.contentOffset.x;
+        CGFloat   collectionViewCenterX =   self.collectionView.frame.size.width*0.5 + self.collectionView.contentOffset.x;
         CGFloat   attributeCenterX      =   attributes.center.x;
         
         CGFloat delta = ABS(collectionViewCenterX-attributeCenterX);
@@ -39,7 +39,7 @@
 }
 -(CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity{
 
-    CGRect rect =CGRectMake(self.collectionView.contentOffset.x+ proposedContentOffset.x,0,self.collectionView.frame.size.width, self.collectionView.frame.size.height);
+    CGRect rect =CGRectMake(proposedContentOffset.x,0,self.collectionView.frame.size.width, self.collectionView.frame.size.height);
     
     NSArray * superAry =[super layoutAttributesForElementsInRect:rect];
     
@@ -50,9 +50,10 @@
         CGFloat contentViewCenterX = self.collectionView.center.x + proposedContentOffset.x;
         
         CGFloat delta = attribiuteCenterX - contentViewCenterX;
-        if (ABS(delta)< minDeta) {
+        if (ABS(delta)< ABS(minDeta)) {
             minDeta = delta;
         }
+        
         return CGPointMake(proposedContentOffset.x + delta, 0);
     }
     
