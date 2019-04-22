@@ -13,7 +13,9 @@
     [super prepareLayout];
     self.itemSize =CGSizeMake(150, 150);
     
-    self.sectionInset = UIEdgeInsetsMake(0,50, 0, 50);
+    CGFloat margin =(self.collectionView.frame.size.width -self.itemSize.width)*0.5;
+    
+    self.sectionInset = UIEdgeInsetsMake(0,margin, 0, margin);
 }
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect{
@@ -26,38 +28,41 @@
         CGFloat   attributeCenterX      =   attributes.center.x;
         
         CGFloat delta = ABS(collectionViewCenterX-attributeCenterX);
-        CGFloat scale = 1- delta/self.collectionView.frame.size.width;
+        CGFloat scale = 1- delta/self.collectionView.frame.size.width*0.5;
         
         attributes.transform = CGAffineTransformMakeScale(scale,scale);
     }
     
     return attributesAry;
 }
--(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds{
-    
-    return YES;
-}
+
 -(CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity{
 
-    CGRect rect =CGRectMake(proposedContentOffset.x,0,self.collectionView.frame.size.width, self.collectionView.frame.size.height);
+    CGRect rect =CGRectMake( proposedContentOffset.x,0,self.collectionView.frame.size.width, self.collectionView.frame.size.height);
     
     NSArray * superAry =[super layoutAttributesForElementsInRect:rect];
     
+    CGFloat minDeta = MAXFLOAT;
     for (UICollectionViewLayoutAttributes * attributes in superAry) {
         
-        CGFloat minDeta = MAXFLOAT;
         CGFloat attribiuteCenterX = attributes.center.x;
-        CGFloat contentViewCenterX = self.collectionView.center.x + proposedContentOffset.x;
+        CGFloat contentViewCenterX = self.collectionView.frame.size.width *0.5 + proposedContentOffset.x;
         
         CGFloat delta = attribiuteCenterX - contentViewCenterX;
         if (ABS(delta)< ABS(minDeta)) {
             minDeta = delta;
         }
-        
-        return CGPointMake(proposedContentOffset.x + delta, 0);
     }
     
-    return  CGPointZero;
+    //修改x的值
+    proposedContentOffset.x+=minDeta;
+    
+    return  proposedContentOffset;
+}
+
+-(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds{
+    
+    return YES;
 }
 
 @end
