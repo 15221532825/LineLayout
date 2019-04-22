@@ -1,24 +1,21 @@
 //
-//  ViewController.m
+//  CircleViewController.m
 //  LineLayout
 //
 //  Created by 智富360 on 2019/4/22.
 //  Copyright © 2019 飞翔. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CircleViewController.h"
 
-@interface ViewController ()
+@interface CircleViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CircleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
 }
-
 
 @end

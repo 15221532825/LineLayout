@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LineViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UINavigationController * naVC =[[UINavigationController alloc]initWithRootViewController:[LineViewController new] ];
+    self.window.rootViewController= naVC;
+    
     return YES;
 }
 

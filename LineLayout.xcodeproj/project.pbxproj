@@ -15,6 +15,10 @@
 		36E387A4226DAE0C00F32E2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E387A3226DAE0C00F32E2B /* main.m */; };
 		36E387AE226DAE0C00F32E2B /* LineLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E387AD226DAE0C00F32E2B /* LineLayoutTests.m */; };
 		36E387B9226DAE0C00F32E2B /* LineLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E387B8226DAE0C00F32E2B /* LineLayoutUITests.m */; };
+		36E387D1226DAEB800F32E2B /* LineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E387D0226DAEB800F32E2B /* LineViewController.m */; };
+		36E387D4226DAEC500F32E2B /* LineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E387D3226DAEC500F32E2B /* LineLayout.m */; };
+		36E387D7226DAF1D00F32E2B /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E387D6226DAF1D00F32E2B /* CircleViewController.m */; };
+		36E387DA226DAF5200F32E2B /* LineCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E387D9226DAF5200F32E2B /* LineCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		36E387B4226DAE0C00F32E2B /* LineLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LineLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E387B8226DAE0C00F32E2B /* LineLayoutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineLayoutUITests.m; sourceTree = "<group>"; };
 		36E387BA226DAE0C00F32E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36E387CF226DAEB800F32E2B /* LineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineViewController.h; sourceTree = "<group>"; };
+		36E387D0226DAEB800F32E2B /* LineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineViewController.m; sourceTree = "<group>"; };
+		36E387D2226DAEC500F32E2B /* LineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineLayout.h; sourceTree = "<group>"; };
+		36E387D3226DAEC500F32E2B /* LineLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineLayout.m; sourceTree = "<group>"; };
+		36E387D5226DAF1D00F32E2B /* CircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleViewController.h; sourceTree = "<group>"; };
+		36E387D6226DAF1D00F32E2B /* CircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleViewController.m; sourceTree = "<group>"; };
+		36E387D8226DAF5200F32E2B /* LineCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineCollectionView.h; sourceTree = "<group>"; };
+		36E387D9226DAF5200F32E2B /* LineCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineCollectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		36E38793226DAE0800F32E2B /* LineLayout */ = {
 			isa = PBXGroup;
 			children = (
+				36E387C6226DAE9700F32E2B /* Class */,
 				36E38794226DAE0800F32E2B /* AppDelegate.h */,
 				36E38795226DAE0800F32E2B /* AppDelegate.m */,
 				36E38797226DAE0800F32E2B /* ViewController.h */,
@@ -130,6 +143,85 @@
 				36E387BA226DAE0C00F32E2B /* Info.plist */,
 			);
 			path = LineLayoutUITests;
+			sourceTree = "<group>";
+		};
+		36E387C6226DAE9700F32E2B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				36E387C7226DAE9700F32E2B /* Line */,
+				36E387CB226DAE9700F32E2B /* Circle */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		36E387C7226DAE9700F32E2B /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				36E387C8226DAE9700F32E2B /* Model */,
+				36E387C9226DAE9700F32E2B /* View */,
+				36E387CA226DAE9700F32E2B /* ViewController */,
+			);
+			path = Line;
+			sourceTree = "<group>";
+		};
+		36E387C8226DAE9700F32E2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36E387C9226DAE9700F32E2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36E387D2226DAEC500F32E2B /* LineLayout.h */,
+				36E387D3226DAEC500F32E2B /* LineLayout.m */,
+				36E387D8226DAF5200F32E2B /* LineCollectionView.h */,
+				36E387D9226DAF5200F32E2B /* LineCollectionView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36E387CA226DAE9700F32E2B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36E387CF226DAEB800F32E2B /* LineViewController.h */,
+				36E387D0226DAEB800F32E2B /* LineViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		36E387CB226DAE9700F32E2B /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				36E387CC226DAE9700F32E2B /* Model */,
+				36E387CD226DAE9700F32E2B /* View */,
+				36E387CE226DAE9700F32E2B /* ViewController */,
+			);
+			path = Circle;
+			sourceTree = "<group>";
+		};
+		36E387CC226DAE9700F32E2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36E387CD226DAE9700F32E2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36E387CE226DAE9700F32E2B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36E387D5226DAF1D00F32E2B /* CircleViewController.h */,
+				36E387D6226DAF1D00F32E2B /* CircleViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +356,10 @@
 			files = (
 				36E38799226DAE0800F32E2B /* ViewController.m in Sources */,
 				36E387A4226DAE0C00F32E2B /* main.m in Sources */,
+				36E387D1226DAEB800F32E2B /* LineViewController.m in Sources */,
+				36E387D4226DAEC500F32E2B /* LineLayout.m in Sources */,
+				36E387D7226DAF1D00F32E2B /* CircleViewController.m in Sources */,
+				36E387DA226DAF5200F32E2B /* LineCollectionView.m in Sources */,
 				36E38796226DAE0800F32E2B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7KMK843WA4;
 				INFOPLIST_FILE = LineLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7KMK843WA4;
 				INFOPLIST_FILE = LineLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
