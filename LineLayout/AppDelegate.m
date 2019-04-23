@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LineViewController.h"
-
+#import "CircleViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,7 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    UINavigationController * naVC =[[UINavigationController alloc]initWithRootViewController:[LineViewController new] ];
+    UINavigationController * naVC =[[UINavigationController alloc]initWithRootViewController:[CircleViewController
+                                                                                              new] ];
     self.window.rootViewController= naVC;
     
     return YES;

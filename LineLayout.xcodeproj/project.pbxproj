@@ -19,6 +19,8 @@
 		36E387D4226DAEC500F32E2B /* LineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E387D3226DAEC500F32E2B /* LineLayout.m */; };
 		36E387D7226DAF1D00F32E2B /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E387D6226DAF1D00F32E2B /* CircleViewController.m */; };
 		36E387DA226DAF5200F32E2B /* LineCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E387D9226DAF5200F32E2B /* LineCollectionView.m */; };
+		36E38867226EBE7400F32E2B /* CircleLyout.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E38866226EBE7400F32E2B /* CircleLyout.m */; };
+		36E3886A226EBE9300F32E2B /* CircleCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E38869226EBE9300F32E2B /* CircleCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 		36E387D6226DAF1D00F32E2B /* CircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleViewController.m; sourceTree = "<group>"; };
 		36E387D8226DAF5200F32E2B /* LineCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineCollectionView.h; sourceTree = "<group>"; };
 		36E387D9226DAF5200F32E2B /* LineCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineCollectionView.m; sourceTree = "<group>"; };
+		36E38865226EBE7400F32E2B /* CircleLyout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleLyout.h; sourceTree = "<group>"; };
+		36E38866226EBE7400F32E2B /* CircleLyout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleLyout.m; sourceTree = "<group>"; };
+		36E38868226EBE9300F32E2B /* CircleCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleCollectionView.h; sourceTree = "<group>"; };
+		36E38869226EBE9300F32E2B /* CircleCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleCollectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +211,10 @@
 		DD945CD7226DEC8F00942EC1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				36E38865226EBE7400F32E2B /* CircleLyout.h */,
+				36E38866226EBE7400F32E2B /* CircleLyout.m */,
+				36E38868226EBE9300F32E2B /* CircleCollectionView.h */,
+				36E38869226EBE9300F32E2B /* CircleCollectionView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36E3886A226EBE9300F32E2B /* CircleCollectionView.m in Sources */,
 				36E38799226DAE0800F32E2B /* ViewController.m in Sources */,
 				36E387A4226DAE0C00F32E2B /* main.m in Sources */,
 				36E387D1226DAEB800F32E2B /* LineViewController.m in Sources */,
@@ -353,6 +364,7 @@
 				36E387D7226DAF1D00F32E2B /* CircleViewController.m in Sources */,
 				36E387DA226DAF5200F32E2B /* LineCollectionView.m in Sources */,
 				36E38796226DAE0800F32E2B /* AppDelegate.m in Sources */,
+				36E38867226EBE7400F32E2B /* CircleLyout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,9 +537,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 568NMX9NVM;
+				DEVELOPMENT_TEAM = 7KMK843WA4;
 				INFOPLIST_FILE = LineLayout/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -545,9 +557,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 568NMX9NVM;
+				DEVELOPMENT_TEAM = 7KMK843WA4;
 				INFOPLIST_FILE = LineLayout/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
