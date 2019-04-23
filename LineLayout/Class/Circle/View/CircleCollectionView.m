@@ -9,13 +9,13 @@
 #import "CircleCollectionView.h"
 
 @implementation CircleCollectionView
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout{
+ 
+    self =[super initWithFrame:frame collectionViewLayout:layout];
+    if (self) {
+        self.backgroundColor =[UIColor blackColor];
+    }
+    return self;
 }
-*/
 
 @end

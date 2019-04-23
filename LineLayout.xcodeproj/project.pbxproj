@@ -192,7 +192,6 @@
 		36E387CB226DAE9700F32E2B /* Circle */ = {
 			isa = PBXGroup;
 			children = (
-				DD945CD8226DEC8F00942EC1 /* Model */,
 				DD945CD7226DEC8F00942EC1 /* View */,
 				36E387CE226DAE9700F32E2B /* ViewController */,
 			);
@@ -217,13 +216,6 @@
 				36E38869226EBE9300F32E2B /* CircleCollectionView.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		DD945CD8226DEC8F00942EC1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
