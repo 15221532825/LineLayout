@@ -24,8 +24,8 @@
     
     for (UICollectionViewLayoutAttributes* attributes in attributesAry) {
         
-        CGFloat   collectionViewCenterX =   self.collectionView.frame.size.width*0.5 + self.collectionView.contentOffset.x;
-        CGFloat   attributeCenterX      =   attributes.center.x;
+        CGFloat  collectionViewCenterX =   self.collectionView.frame.size.width*0.5 + self.collectionView.contentOffset.x;
+        CGFloat  attributeCenterX      =   attributes.center.x;
         
         CGFloat delta = ABS(collectionViewCenterX-attributeCenterX);
         CGFloat scale = 1- delta/self.collectionView.frame.size.width*0.5;
